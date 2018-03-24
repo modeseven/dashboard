@@ -1,0 +1,20 @@
+{
+  "generator-ngx-rocket": {
+    "version": "4.1.0",
+    "props": {
+      "location": "path",
+      "appName": "dash",
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "material",
+      "layout": "simple",
+      "auth": false,
+      "lazy": false,
+      "projectName": "dash",
+      "packageManager": "npm",
+      "mobile": []
+    }
+  }
+}

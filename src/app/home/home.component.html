@@ -1,0 +1,31 @@
+<div class="container">
+  <mat-card>
+    <!-- <p>
+      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
+    </p> -->
+    <mat-card-content>
+      <mat-card-title translate>Dash Example</mat-card-title>
+      <!-- <mat-card-subtitle>
+        <app-loader [isLoading]="isLoading" size="1.5"></app-loader>
+        <q [hidden]="isLoading">{{quote}}</q>
+      </mat-card-subtitle> -->
+      
+
+      <div *ngFor="let widget of widgets">
+        <widget-wrapper [widgetConfig]="widget"></widget-wrapper>
+      </div>
+
+      <hr>
+
+      <h3>WidgetLess Visualization</h3>
+
+      <app-filterable-bar [visConfig]="freeConfig"> </app-filterable-bar>
+
+      <div >
+        
+      </div>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>
