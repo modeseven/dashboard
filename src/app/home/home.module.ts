@@ -12,6 +12,7 @@ import { QuoteService } from './quote.service';
 import { WidgetWrapperComponent } from './widget-wrapper/widget-wrapper.component';
 import { FilterableBarComponent } from './filterable-bar/filterable-bar.component';
 import { SimpleMetricComponent } from './simple-metric/simple-metric.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { SimpleMetricComponent } from './simple-metric/simple-metric.component';
     HomeComponent,
     WidgetWrapperComponent,
     FilterableBarComponent,
-    SimpleMetricComponent
+    SimpleMetricComponent,
+    DashboardComponent
   ],
   entryComponents: [FilterableBarComponent, SimpleMetricComponent],
   providers: [

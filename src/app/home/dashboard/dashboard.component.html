@@ -1,0 +1,6 @@
+<div class="dashboard-wrapper">
+  <!-- Drag and Drop stuff goes here... -->
+  <div *ngFor="let widget of widgets">
+    <widget-wrapper [widgetConfig]="widget"></widget-wrapper>
+  </div>
+</div>

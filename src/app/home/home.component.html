@@ -10,10 +10,7 @@
         <q [hidden]="isLoading">{{quote}}</q>
       </mat-card-subtitle> -->
       
-
-      <div *ngFor="let widget of widgets">
-        <widget-wrapper [widgetConfig]="widget"></widget-wrapper>
-      </div>
+      <app-dashboard [widgets]="widgets"></app-dashboard>
 
       <hr>
 

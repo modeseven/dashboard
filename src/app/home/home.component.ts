@@ -23,13 +23,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
 
-      this.widgets.push(this.quoteService.getBarConfig(500,'Foo'));
-      this.widgets.push(this.quoteService.getBarConfig(5000,'Bar'));
-      this.widgets.push(this.quoteService.getSimpleMtricConfig(300,'Baz'));
+      this.widgets.push(this.quoteService.getBarConfig('Foo','mockEndPoint1'));
+      this.widgets.push(this.quoteService.getBarConfig('Bar','mockEndPoint2'));
+      this.widgets.push(this.quoteService.getSimpleMtricConfig('Baz'));     
 
-      
-
-      this.freeConfig = this.quoteService.getFilterableBarGenericConfig(500);
+      this.freeConfig = this.quoteService.getFilterableBarGenericConfig('mockEndPoint3');
 
   }
 

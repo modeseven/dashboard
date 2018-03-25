@@ -27,8 +27,6 @@ export class SimpleMetricVisConfig implements VisConfig {
   dataProvider: () => Observable<SimpleMetricData>;
 }
 
-
-
 @Component({
   selector: 'app-simple-metric',
   templateUrl: './simple-metric.component.html',
@@ -41,7 +39,7 @@ export class SimpleMetricComponent implements OnInit, Visualization {
   dataProvider: () => Observable<SimpleMetricData>;  
   config: SimpleMetricConfig;
 
-  data: any;
+  data: SimpleMetricData;
 
   constructor() { }
 

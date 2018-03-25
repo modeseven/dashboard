@@ -6,10 +6,6 @@ export class VisConfig {
     dataProvider: () => Observable<any>;
 }
 
-export interface Visualization {
-   visConfig: VisConfig;
-}
-
 /**
  * config for widget (incldue 1 VisConfig)
  */
@@ -22,4 +18,10 @@ export class WidgetConfig {
         this.visConfig = visConfig;
     }
 }
+
+export interface Visualization {
+    visConfig: VisConfig;
+    data: any;
+    render(): void;
+ }
 
