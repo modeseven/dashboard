@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
-import { QuoteService } from './quote.service';
+import { WidgetService } from './widget.service';
 import { FilterableBarComponent } from './filterable-bar/filterable-bar.component';
 import { WidgetConfig, VisConfig } from '@app/home/visualization-models';
 
@@ -12,22 +12,19 @@ import { WidgetConfig, VisConfig } from '@app/home/visualization-models';
 })
 export class HomeComponent implements OnInit {
 
-  quote: string;
-  isLoading: boolean;
   widgets:  WidgetConfig[] = [];
 
   freeConfig: VisConfig;
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(private quoteService: WidgetService) { }
 
   ngOnInit() {
-    this.isLoading = true;
 
-      this.widgets.push(this.quoteService.getBarConfig('Foo','mockEndPoint1'));
-      this.widgets.push(this.quoteService.getBarConfig('Bar','mockEndPoint2'));
-      this.widgets.push(this.quoteService.getSimpleMtricConfig('Baz'));     
+      this.widgets.push(this.quoteService.getBarWidgetConfig('Foo','mockEndPoint1'));
+      this.widgets.push(this.quoteService.getBarWidgetConfig('Bar','mockEndPoint2'));
+      this.widgets.push(this.quoteService.getSimpleMtricWidgetConfig('Baz'));     
 
-      this.freeConfig = this.quoteService.getFilterableBarGenericConfig('mockEndPoint3');
+      this.freeConfig = this.quoteService.getFilterableBarVisConfig('mockEndPoint3');
 
   }
 

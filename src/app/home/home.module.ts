@@ -8,7 +8,7 @@ import { SharedModule } from '@app/shared';
 import { MaterialModule } from '@app/material.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { QuoteService } from './quote.service';
+import { WidgetService } from './widget.service';
 import { WidgetWrapperComponent } from './widget-wrapper/widget-wrapper.component';
 import { FilterableBarComponent } from './filterable-bar/filterable-bar.component';
 import { SimpleMetricComponent } from './simple-metric/simple-metric.component';
@@ -33,7 +33,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   entryComponents: [FilterableBarComponent, SimpleMetricComponent],
   providers: [
-    QuoteService
+    WidgetService
   ]
 })
 export class HomeModule { }

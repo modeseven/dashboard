@@ -7,43 +7,34 @@ import { of } from 'rxjs/observable/of';
 import { WidgetConfig, VisConfig } from '@app/home/visualization-models';
 import { SimpleMetricVisConfig,SimpleMetricData, SimpleMetricConfig } from '@app/home/simple-metric/simple-metric.component';
 
-const routes = {
-  quote: (c: RandomQuoteContext) => `/jokes/random?category=${c.category}`
-};
-
-export interface RandomQuoteContext {
-  // The quote's category: 'dev', 'explicit'...
-  category: string;
-}
-
 @Injectable()
-export class QuoteService {
+export class WidgetService {
 
   constructor(private httpClient: HttpClient) { }
 
 
-  getBarConfig( title: string = 'Foo',ep: string = 'mockEndPoint1') : WidgetConfig {
-    const ret = new WidgetConfig( this.getFilterableBarGenericConfig(ep));
+  getBarWidgetConfig( title: string = 'Foo',ep: string = 'mockEndPoint1') : WidgetConfig {
+    const ret = new WidgetConfig( this.getFilterableBarVisConfig(ep));
     ret.link = title + ' Link';
     ret.title = title + ' Bar Chart'
     return ret;
   }
 
-  getSimpleMtricConfig( title: string = 'Foo') : WidgetConfig {
-    const ret = new WidgetConfig( this.getSimpleMetricGenericConfig(1000));
+  getSimpleMtricWidgetConfig( title: string = 'Foo') : WidgetConfig {
+    const ret = new WidgetConfig( this.getSimpleMetricVisConfig());
     ret.link = title + ' Link';
     ret.title = title + ' Simple Metric'
     return ret;
   }
 
-  getFilterableBarGenericConfig( ep: string): FilterableBarVisConfig {
+  getFilterableBarVisConfig( ep: string): FilterableBarVisConfig {
     const  visConfig = new FilterableBarVisConfig();
     visConfig.config = {configOption: 'Show IT'} as FilterableBarConfig;
     visConfig.dataProvider = this[ep];
     return visConfig;
   }
 
-  getSimpleMetricGenericConfig(speed: number = 1000): SimpleMetricVisConfig {
+  getSimpleMetricVisConfig(): SimpleMetricVisConfig {
     const  visConfig = new SimpleMetricVisConfig();
     visConfig.config = {configOption: 'show something'} as SimpleMetricConfig;
     visConfig.dataProvider = this.mockSimpleMetric;
