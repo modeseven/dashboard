@@ -21,7 +21,8 @@
       "prefix": "app",
       "styles": [
         "main.scss",
-        "../node_modules/c3/c3.min.css"
+        "../node_modules/c3/c3.min.css",
+        "../node_modules/dragula/dist/dragula.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

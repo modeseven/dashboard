@@ -13,6 +13,7 @@ import { WidgetWrapperComponent } from './widget-wrapper/widget-wrapper.componen
 import { FilterableBarComponent } from './filterable-bar/filterable-bar.component';
 import { SimpleMetricComponent } from './simple-metric/simple-metric.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DragulaModule }         from 'ng2-dragula/ng2-dragula';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SharedModule,
     FlexLayoutModule,
     MaterialModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    DragulaModule
   ],
   declarations: [
     HomeComponent,

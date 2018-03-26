@@ -12,6 +12,7 @@ import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {DragulaModule , DragulaService} from "ng2-dragula/ng2-dragula"
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
     SharedModule,
     HomeModule,
     AboutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DragulaModule
   ],
   declarations: [AppComponent],
   providers: [

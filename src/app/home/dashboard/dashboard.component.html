@@ -1,6 +1,6 @@
 <div class="dashboard-wrapper">
   <!-- Drag and Drop stuff goes here... -->
-  <div *ngFor="let widget of widgets">
+  <div *ngFor="let widget of widgets" class='container' [dragula]='"first-bag"'>
     <widget-wrapper [widgetConfig]="widget"></widget-wrapper>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WidgetConfig } from '@app/home/visualization-models';
+import { DragulaService } from 'ng2-dragula';
 
 @Component({
   selector: 'app-dashboard',

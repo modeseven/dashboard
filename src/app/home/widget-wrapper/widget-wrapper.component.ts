@@ -7,12 +7,16 @@ import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'widget-wrapper',
-  template: `<div style="border: 1px solid blue;padding: 10px; margin:10px;text-align:center;">
+  template: `<mat-card>
+
+  <mat-card-title>
   <h2> {{widgetConfig.title}} Widget   <a href="{{widgetConfig.link}}">link</a> </h2>
+  </mat-card-title>
+  
   <mat-spinner  *ngIf="loading" ></mat-spinner>
   <div  #target></div>
   <button (click)="reload()">reload</button>
-  </div>
+  </mat-card>
   `
 })
 export class WidgetWrapperComponent {
